@@ -4,7 +4,7 @@ var bodyparser= require("body-parser")
 var app = express();
 app.use(bodyparser.urlencoded({extended:true}))
 app.get("/",(req,res)=>{
-    res.sendFile(__dirname + "/index.html")
+    res.sendFile(__dirname + "/HTML/index.html")
 });
 app.post("/" , (req,res)=>{
     const query = req.body.cityName
@@ -25,6 +25,6 @@ app.post("/" , (req,res)=>{
         })
     })
 })
-app.listen(80,()=>{
+app.listen(8000,()=>{
     console.log("server started");
 });
